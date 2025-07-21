@@ -1,202 +1,179 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang=fr>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Professeur Tournesol">
-    <meta name="description" content="Explore Cookie Cookie's delicious, freshly baked cookies, crafted with love and the finest ingredients. Your local bakery for a gourmet delight.">
-    <meta name="keywords" content="pâtisserie, gâteau, tarte, macaron, éclair, chocolat, dessert, boulangerie, brioche, cookies, muffin, crêpe, croissant, beignet, glaçage, fondant, viennoiserie, galette, madeleine, meringue">
-    <script src="https://kit.fontawesome.com/58aafaf913.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Cookie Cookie</title>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=author content="Professeur Tournesol">
+<meta name=description content="Explore Cookie Cookie's delicious, freshly baked cookies, crafted with love and the finest ingredients. Your local bakery for a gourmet delight.">
+<meta name=keywords content="pâtisserie, gâteau, tarte, macaron, éclair, chocolat, dessert, boulangerie, brioche, cookies, muffin, crêpe, croissant, beignet, glaçage, fondant, viennoiserie, galette, madeleine, meringue">
+<script src=https://kit.fontawesome.com/58aafaf913.js crossorigin=anonymous></script>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH crossorigin=anonymous>
+<link rel=preconnect href=https://fonts.googleapis.com>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel=stylesheet>
+<link rel=stylesheet href=css/style.css>
+<title>Cookie Cookie</title>
 </head>
 <body>
-    <div class="header">
-        <a href="/">
-            <i class="fa-solid fa-cookie-bite"></i>
-            <h1>Cookie Cookie</h1>
-        </a>
-
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <ul id="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </ul>
-
-        <i id="Cart" class="fa-solid fa-cart-shopping"></i>
-
-        <div id="cart-content" style="display: none;" >
-            <button id="close-cart">X</button>
-            <h2>Mon panier</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="cart-total"></span></p>
-            <div class="buttonzone">
-                <button id="clear-cart">Vider le panier</button>
-                <button id="checkout">Valider la commande</button>
-            </div>
-        </div>
-    </div>
-
-
-    <div id="main-content">
-        <div id="about" class="section1">
-            <div>
-                <article>
-                    <h2>Delicious Cookies Baked with Love</h2>
-                    <p>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest ingredients.</p>
-                    <div>
-                        <button type="button">Explore Menu</button>
-                        <button type="button">Contact Us</button>
-                    </div>
-                </article>
-                <img src="img/5.jpg" alt="Assortiment de cookies sur une plaque de cuisson">
-            </div>
-        </div>
-
-        <article class="section2">
-            <div>
-                <h2>Our menu</h2>
-                <h3>Explore Our Delectable Cookies</h3>
-                <h4>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</h4>
-            </div>
-            
-
-            <article>
-                <figure>
-                    <img src="img/1.jpg" alt="Assortiment de cookies frais">
-                    <div>
-                        <h3>Chocolate Chip</h3>
-                        <h4>Our classic chocolate chip cookies, baked to perfection.</h4>
-                        <div>
-                            <p>$2.50</p>
-                            <button id="addToCart" data-name="Chocolate Chip" data-price="2.50">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="img/2.jpg" alt="Pile de cookies sur une plaque de cuisson">
-                    <div>
-                        <h3>Oatmeal Raisin</h3>
-                        <h4>Chewy oatmeal cookies with plump raisins</h4>
-                        <div>
-                            <p>$2.25</p>
-                            <button id="addToCart" data-name="Oatmeal Raisin" data-price="2.25">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="img/3.jpg" alt="Assortiment de macaron dans un saladier">
-                    <div>
-                        <h3>Peanut Butter</h3>
-                        <h4>Rich and creamy peanut butter cookies.</h4>
-                        <div>
-                            <p>$2.75</p>
-                            <button id="addToCart" data-name="Peanut Butter" data-price="2.75">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-                <figure>
-                    <img src="img/4.jpg" alt="Assortiment de macaron sur un plan de travail">
-                    <div>
-                        <h3>Sugar</h3>
-                        <h4>Soft and chewy sugar cookies, perfect for any occasion.</h4>
-                        <div>
-                            <p>$2.00</p>
-                            <button id="addToCart" data-name="Sugar" data-price="2.00">Add to Cart</button>
-                        </div>
-                    </div>
-                </figure>
-            </article>
-        </article>
-
-        <div class="section3">
-            <img src="img/6.jpg" alt="Assortiment de sablés dans une assiete">
-            <article>
-                <h3>About us</h3>
-                <h4>Baking with Passion and Tradition</h4>
-                <h5>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</h5>
-                <h6>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</h6>
-            </article>
-        </div>
-    </div>
-
-    
-
-    <main id="contact">
-        <h2>Contact Us</h2>
-        <h3>Get in Touch</h3>
-        <h4>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</h4>
-        <span class="formulaire">
-            <label for="nameInput">Name:</label>
-            <input type="text" id="nameInput" name="name">
-
-            <label for="emailInput">Email:</label>
-            <input type="text" id="emailInput" name="email">
-
-            <label for="messageInput">Message:</label>
-            <input type="text" id="messageInput" name="message">
-            <button type="submit">Submit</button>
-        </span>
-    </main>
-
-    <form id="newsletter" action="newsletter.php" method="post"> <h3>Inscription à la newsletter</h3>
-        <label for="newsletterName">Name:</label>
-        <input type="text" id="newsletterName" name="name">
-        <label for="newsletterEmail">E-mail:</label>
-        <input type="text" id="newsletterEmail" name="email">
-        <input type="submit">
-    </form>
-
-    <div class="footer">
-    <a href="/">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <p>Cookie Cookie</p>
-    </a>
-
-    <div>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Refund Policy</a>
-    </div>
+<div class=header>
+<a href=/ >
+<i class="fa-solid fa-cookie-bite"></i>
+<h1>Cookie Cookie</h1>
+</a>
+<button class=menu-toggle aria-label="Toggle menu">
+<i class="fas fa-bars"></i>
+</button>
+<ul id=nav-links>
+<a href=#>Home</a>
+<a href=#>Menu</a>
+<a href=#>About</a>
+<a href=#>Contact</a>
+</ul>
+<i id=Cart class="fa-solid fa-cart-shopping"></i>
+<div id=cart-content style=display:none>
+<button id=close-cart>X</button>
+<h2>Mon panier</h2>
+<ul id=cart-items></ul>
+<p>Total: $<span id=cart-total></span></p>
+<div class=buttonzone>
+<button id=clear-cart>Vider le panier</button>
+<button id=checkout>Valider la commande</button>
 </div>
-<div class="footer2">
-    <div class="apropos">
-        <h2>A propos</h2>
-        <p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron. <br>    
-            Mon numéro de téléphone : 05 56 67 78 89.<br>  
-            Je réponds au téléphone du lundi au vendredi de 10 h à 19 h.</p>
-    </div>
-
-    <div class="partenaire">
-        <ul>
-            <a href="https://www.castorama.fr/">Castorama</a>
-            <a href="https://www.cash-piscines.com/?utm_source=Google&utm_medium=Search&utm_id=Marque&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw_Eb6NBMMKSsR_T85NYbJpVzO_9AhBy1OgMrgUcKMu7wZJfSKJenvEaAtVsEALw_wcB">Cash piscine</a>
-            <a href="https://www.renault.fr/?CAMPAIGN=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_campaign=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_medium=cpc&utm_source=google&utm_content=generic-na-brand-ao-exact-contextual-def_renault-renault&utm_term=renault&&&ppc_keyword=renault&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw-065BEHyfXS9jGutRwLhtxhY-7iV0odY0LqciFY4FWYW9LsqzydaUaAgMjEALw_wcB&gclsrc=aw.ds">Renault</a>
-            <a href="https://www.kebab-frites.com/kebab/brignoles-v34474.html">Kebab</a>
-            <a href="https://www.credit-agricole.fr/ca-pca/particulier.html">Crédit agricole</a>
-            <a href="https://travail-emploi.gouv.fr/droit-du-travail/handicap-et-travail/article/esat-etablissements-ou-services-d-aide-par-le-travail">Travail Emploi</a>
-        </ul>
-    </div>
-    <div class="social">
-        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-
-    <!-- NEWSLETTER A AJOUTER (REMONTER DANS UNE SECTION) -->
-    
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+</div>
+<div id=main-content>
+<div id=about class=section1>
+<div>
+<article>
+<h2>Delicious Cookies Baked with Love</h2>
+<p>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest ingredients.</p>
+<div>
+<button type=button>Explore Menu</button>
+<button type=button>Contact Us</button>
+</div>
+</article>
+<img src=img/5.jpg alt="Assortiment de cookies sur une plaque de cuisson">
+</div>
+</div>
+<article class=section2>
+<div>
+<h2>Our menu</h2>
+<h3>Explore Our Delectable Cookies</h3>
+<h4>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</h4>
+</div>
+<article>
+<figure>
+<img src=img/1.jpg alt="Assortiment de cookies frais" loading=lazy>
+<div>
+<h3>Chocolate Chip</h3>
+<h4>Our classic chocolate chip cookies, baked to perfection.</h4>
+<div>
+<p>$2.50</p>
+<button class=addToCart data-name="Chocolate Chip" data-price=2.50>Add to Cart</button>
+</div>
+</div>
+</figure>
+<figure>
+<img src=img/2.jpg alt="Pile de cookies sur une plaque de cuisson" loading=lazy>
+<div>
+<h3>Oatmeal Raisin</h3>
+<h4>Chewy oatmeal cookies with plump raisins</h4>
+<div>
+<p>$2.25</p>
+<button class=addToCart data-name="Oatmeal Raisin" data-price=2.25>Add to Cart</button>
+</div>
+</div>
+</figure>
+<figure>
+<img src=img/3.jpg alt="Assortiment de macaron dans un saladier" loading=lazy>
+<div>
+<h3>Peanut Butter</h3>
+<h4>Rich and creamy peanut butter cookies.</h4>
+<div>
+<p>$2.75</p>
+<button class=addToCart data-name="Peanut Butter" data-price=2.75>Add to Cart</button>
+</div>
+</div>
+</figure>
+<figure>
+<img src=img/4.jpg alt="Assortiment de macaron sur un plan de travail" loading=lazy>
+<div>
+<h3>Sugar</h3>
+<h4>Soft and chewy sugar cookies, perfect for any occasion.</h4>
+<div>
+<p>$2.00</p>
+<button class=addToCart data-name=Sugar data-price=2.00>Add to Cart</button>
+</div>
+</div>
+</figure>
+</article>
+</article>
+<div class=section3>
+<img src=img/6.jpg alt="Assortiment de sablés dans une assiete" loading=lazy>
+<article>
+<h3>About us</h3>
+<h4>Baking with Passion and Tradition</h4>
+<h5>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</h5>
+<h6>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</h6>
+</article>
+</div>
+</div>
+<main id=contact>
+<h2>Contact Us</h2>
+<h3>Get in Touch</h3>
+<h4>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</h4>
+<span class=formulaire>
+<label for=nameInput>Name:</label>
+<input id=nameInput name=name>
+<label for=emailInput>Email:</label>
+<input id=emailInput name=email>
+<label for=messageInput>Message:</label>
+<input id=messageInput name=message>
+<button type=submit>Submit</button>
+</span>
+</main>
+<form id=newsletter action=newsletter.php method=post> <h3>Inscription à la newsletter</h3>
+<label for=newsletterName>Name:</label>
+<input id=newsletterName name=name>
+<label for=newsletterEmail>E-mail:</label>
+<input id=newsletterEmail name=email>
+<input type=submit>
+</form>
+<div class=footer>
+<a href=/ >
+<i class="fa-solid fa-cookie-bite"></i>
+<p>Cookie Cookie</p>
+</a>
+<div>
+<a href=#>Privacy Policy</a>
+<a href=#>Terms of Service</a>
+<a href=#>Refund Policy</a>
+</div>
+</div>
+<div class=footer2>
+<div class=apropos>
+<h2>A propos</h2>
+<p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron. <br>
+Mon numéro de téléphone : 05 56 67 78 89.<br>
+Je réponds au téléphone du lundi au vendredi de 10 h à 19 h.</p>
+</div>
+<div class=partenaire>
+<ul>
+<a href=https://www.castorama.fr/ >Castorama</a>
+<a href="https://www.cash-piscines.com/?utm_source=Google&utm_medium=Search&utm_id=Marque&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw_Eb6NBMMKSsR_T85NYbJpVzO_9AhBy1OgMrgUcKMu7wZJfSKJenvEaAtVsEALw_wcB">Cash piscine</a>
+<a href="https://www.renault.fr/?CAMPAIGN=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_campaign=fr-fr-r-l-def-brand-all_products-na-go-classic-marque_renault_go_def_exact&utm_medium=cpc&utm_source=google&utm_content=generic-na-brand-ao-exact-contextual-def_renault-renault&utm_term=renault&&&ppc_keyword=renault&gad_source=1&gclid=Cj0KCQjwhb60BhClARIsABGGtw-065BEHyfXS9jGutRwLhtxhY-7iV0odY0LqciFY4FWYW9LsqzydaUaAgMjEALw_wcB&gclsrc=aw.ds">Renault</a>
+<a href=https://www.kebab-frites.com/kebab/brignoles-v34474.html>Kebab</a>
+<a href=https://www.credit-agricole.fr/ca-pca/particulier.html>Crédit agricole</a>
+<a href=https://travail-emploi.gouv.fr/droit-du-travail/handicap-et-travail/article/esat-etablissements-ou-services-d-aide-par-le-travail>Travail Emploi</a>
+</ul>
+</div>
+<div class=social>
+<a href=https://www.instagram.com/ ><i class="fa-brands fa-instagram"></i></a>
+<a href=https://www.facebook.com/ ><i class="fa-brands fa-facebook"></i></a>
+<a href="https://x.com/home?lang=fr"><i class="fa-brands fa-twitter"></i></a>
+</div>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js integrity=sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz crossorigin=anonymous></script>
+<script src=js/script.js></script>
 </body>
-
 </html>
