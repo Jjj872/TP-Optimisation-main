@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +34,9 @@
 
         <i id="Cart" class="fa-solid fa-cart-shopping"></i>
 
-        <div id="cart-content" style="display: none;">
+        <div id="cart-content" style="display: none;" >
             <button id="close-cart">X</button>
-            <h3>Mon panier</h3>
+            <h2>Mon panier</h2>
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total"></span></p>
             <div class="buttonzone">
@@ -48,15 +48,14 @@
 
 
     <div id="main-content">
-        <h2 style="display: none;">Cookie Cookie Backery shop</h2>
         <div id="about" class="section1">
             <div>
                 <article>
-                    <h3>Delicious Cookies Baked with Love</h3>
-                    <h4>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest ingredients.</h4>
+                    <h2>Delicious Cookies Baked with Love</h2>
+                    <p>Indulge in the irresistible flavors of our freshly baked cookies, made with the finest ingredients.</p>
                     <div>
-                        <button type="submit">Explore Menu</button>
-                        <button type="submit">Contact Us</button>
+                        <button type="button">Explore Menu</button>
+                        <button type="button">Contact Us</button>
                     </div>
                 </article>
                 <img src="img/5.jpg" alt="Assortiment de cookies sur une plaque de cuisson">
@@ -64,22 +63,12 @@
         </div>
 
         <article class="section2">
-        <h2>Cookie Cookie Shop</h2>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <div>
-                <h3>Our menu</h3>
-                <h4>Explore Our Delectable Cookies</h4>
-                <h5>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</h5>
+                <h2>Our menu</h2>
+                <h3>Explore Our Delectable Cookies</h3>
+                <h4>Indulge in a wide variety of freshly baked cookies, each with its own unique flavor and texture.</h4>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            
 
             <article>
                 <figure>
@@ -130,23 +119,22 @@
         </article>
 
         <div class="section3">
-        <h2>Cookie Cookie Shop</h2>
             <img src="img/6.jpg" alt="Assortiment de sablés dans une assiete">
             <article>
-                <h6>About us</h6>
-                <h3>Baking with Passion and Tradition</h3>
-                <br><br>
-                <h4>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</h4>
-                <br><br>
-                <h4>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</h4>
+                <h3>About us</h3>
+                <h4>Baking with Passion and Tradition</h4>
+                <h5>At Cookie Cookie, we are a family-owned bakery that has been serving our community with love and dedication for over 20 years. Our cookies are made with the finest ingredients, baked to perfection, and infused with the warmth and comfort of a neighborhood bakeshop.</h5>
+                <h6>We take pride in our commitment to quality, sustainability, and supporting local suppliers. Our mission is to bring joy and delight to every customer who steps through our doors or visits our online shop.</h6>
             </article>
         </div>
     </div>
+
+    
+
     <main id="contact">
-        <h6>Contact Us</h6>
+        <h2>Contact Us</h2>
         <h3>Get in Touch</h3>
         <h4>Have a question, feedback, or just want to say hello? Fill out the form below and we'll get back to you as soon as possible.</h4>
-        <br><br><br>
         <span class="formulaire">
             <label for="nameInput">Name:</label>
             <input type="text" id="nameInput" name="name">
@@ -159,6 +147,14 @@
             <button type="submit">Submit</button>
         </span>
     </main>
+
+    <form id="newsletter" action="newsletter.php" method="post"> <h3>Inscription à la newsletter</h3>
+        <label for="newsletterName">Name:</label>
+        <input type="text" id="newsletterName" name="name">
+        <label for="newsletterEmail">E-mail:</label>
+        <input type="text" id="newsletterEmail" name="email">
+        <input type="submit">
+    </form>
 
     <div class="footer">
     <a href="/">
@@ -173,9 +169,8 @@
     </div>
 </div>
 <div class="footer2">
-    <!-- A PROPOS A AJOUTER (REMONTER DANS UNE SECTION)-->
     <div class="apropos">
-        <h3>A propos</h3>
+        <h2>A propos</h2>
         <p>Mon adresse : 140 avenue jacques troussel, 83136 Rocbaron. <br>    
             Mon numéro de téléphone : 05 56 67 78 89.<br>  
             Je réponds au téléphone du lundi au vendredi de 10 h à 19 h.</p>
@@ -198,15 +193,9 @@
     </div>
 
     <!-- NEWSLETTER A AJOUTER (REMONTER DANS UNE SECTION) -->
-    <form action="newsletter.php" method="post" style="display: none;">
-        <p>Inscription à la newsletter</p>
-        Name: <input type="text" name="name"><br>
-        E-mail: <input type="text" name="email"><br>
-        <input type="submit">
-        </form>
+    
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="css/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

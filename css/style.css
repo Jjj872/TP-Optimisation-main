@@ -111,8 +111,6 @@ a{
     padding: 0;
 }
 
-/*  */
-
 img{
     width:100%;
     object-fit: cover;
@@ -161,6 +159,7 @@ article.section2{
 
 .section2 >div{
     text-align: center;
+    padding: 120px 0;
 }
 
 .section2 article{
@@ -216,6 +215,8 @@ article.section2{
     grid-template-columns: auto 50%;
     gap: 80px;
     align-items: center;
+    h4 {padding-bottom: 50px;}
+    h5 {padding-bottom: 50px;}
 }
 
 .section3 img{
@@ -226,6 +227,9 @@ main{
     max-width: 860px;
     margin:auto;
     text-align: center;
+    h4 {
+        padding: 30px 0;
+    }
 }
 
 .formulaire{
@@ -233,6 +237,16 @@ main{
     gap: 24px;;
     width:60%;
     margin:auto;
+}
+
+#newsletter {
+    display: grid;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    padding-top: 160px;
+    input {margin:20px 0;}
+    h3 {padding-bottom: 30px;}
 }
 
 .formulaire input:nth-child(3){
@@ -276,6 +290,11 @@ main{
     background: var(--black);
 }
 
+.apropos{
+    h2{color: white;}
+    p{color: white;}
+}
+
 div.tags p,
 .partenaires a{
     font-size: 0px!important;
@@ -292,11 +311,18 @@ div.tags p,
     .section1> div,
     .section3 {
         grid-template-columns: auto;
+        article {text-align: center;}
     }
 
+    .section2 article {
+        display: grid;
+    }
     .section2 article figure{
         flex:1 0 48%;
         /* flex-wrap: wrap; */
+    }
+    #newsletter {
+        width: 60%;
     }
 }
 @media screen and (max-width:767px){
@@ -325,6 +351,18 @@ div.tags p,
 
     .menu-toggle {
         display: block;
+    }
+
+    #newsletter {
+        width: 79%;
+    }
+
+    .footer a {
+       p { display: none;}
+       i { display: none;}
+    }
+    .footer div {
+        a {margin-left: 20px;}
     }
 }
 
